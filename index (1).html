@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agathos Perfume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fefefe;
+      color: #222;
+    }
+    header {
+      background: linear-gradient(135deg, #ff6b6b, #feca57, #ff9ff3, #54a0ff);
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease infinite;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .logo {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 8px 20px rgba(255,107,107,0.3));
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 12px 25px rgba(255,107,107,0.4));
+    }
+    @media (max-width: 768px) {
+      .logo {
+        max-width: 250px;
+      }
+      header {
+        padding: 40px 20px;
+      }
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 32px;
+      color: #333;
+      background: linear-gradient(45deg, #ff6b6b, #feca57);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .scents {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      flex: 1;
+      min-width: 280px;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      padding: 25px;
+      background: linear-gradient(white, white) padding-box,
+                  linear-gradient(45deg, #ff6b6b, #feca57, #ff9ff3) border-box;
+      box-shadow: 0 8px 25px rgba(255,107,107,0.15);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,107,107,0.1), transparent);
+      transition: left 0.5s ease;
+    }
+    .card:hover::before {
+      left: 100%;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(255,107,107,0.25);
+    }
+    .card h3 {
+      color: #ff6b6b;
+      margin-top: 0;
+    }
+    footer {
+      text-align: center;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      color: white;
+      padding: 25px;
+      font-size: 14px;
+    }
+    a {
+      color: #ff6b6b;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #feca57;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Agathos.jpg" alt="Agathos Perfume - A New Scent For You" class="logo">
+  </header>
+
+  <section class="section">
+    <h2>About Agathos</h2>
+    <p>Agathos is a unisex perfume brand designed for everyone who wants to express their personality with style. strong, elegant, and long-lasting, our scents are created to bring confidence and happiness to your daily life.</p>
+  </section>
+
+  <section class="section">
+    <h2>Scents & Pricing</h2>
+    <div class="scents">
+      <div class="card">
+        <h3>Oud (For Girls)</h3>
+        <p>Rich, woody, and deeply luxurious. Perfect for bold personalities.</p>
+        <strong>30ml: 100 EGP<br>50ml: 150 EGP</strong>
+      </div>
+      <div class="card">
+        <h3>Lavender & Sandal (For Boys)</h3>
+        <p>Soft and floral with a warm creamy base. Balanced and soothing for any moment.</p>
+        <strong>30ml: 100 EGP<br>50ml: 150 EGP</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Special Deals</h2>
+    <p>Buy 2, Get 1 Free • First-time buyers get 10% off • Free tester paper available before purchase if wanted</p>
+  </section>
+
+  <section class="section">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:agathos@perfume.com">agathos@perfume.com</a><br />
+    Follow us on Instagram: <a href="https://instagram.com/agathosperfume">@agathosperfume</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Agathos Perfume. All rights reserved.
+  </footer>
+</body>
+</html>
